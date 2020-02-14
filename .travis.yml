@@ -6,8 +6,6 @@ env:
   - NODE_VERSION=8-jessie
   - NODE_VERSION=10-jessie
 
-secure: "kEx0sGiHITOHKFlN/tkjk1nTI5FrV8ioxu7DJpUUfgBec5tD974QmLzqCLU8kJ7cPQe1HC3mkw/Nmo/LmXqpR+WTR2s42MmfFhwMEVb+7f70v2FGYiae1dS6bpgSeAhxKJjeVcAPuL5LsyrQC8nXpP+UbnyFqEen3ESltWLXWrzvpskOtTe5pmdW1tH+5GeoJwdahml46kJ0u5BVOJjo1zgrSlTMNz4X/pWgsCTmG+w+zpqJ4O1X2xPEqdVVQcchiwPPYZsizir8oNgG9Md/mY0+hn6xGA10ztRJkq+lWT984aP5fu+dCihYWgo2dFyMzb1iZLemuyRiTXYH3AsOXB+gEFnmpoiEF4w5k+DMLk6aJSqNwKWWZ59sOX7cKGm6JF1BaPevsHClmTJXSldd7ugGnb8nfAOGuCiNFpBu6r9Te4FJt8+PHvnV9z3uthlbc0vgVe2KwEzySB2bGVgeGtG4GalB+O2d1OfF9PBGaTuR++q4RqvIH9y9brm8gN8EXnNY/I64+opXHFoPiYnf2eb58nlVy6GvkqBm3Lws73JVOAdlm8gClRqY1kZkIbCgt6+5BiPKXQyvPt6PMagclxizt+UCuVJAYNKBQ496ItJXvvaUG8mOpfiZzOkP/FGk3VEWK16K7Jz5kTHR/nSxOTSlfX67Cmyf2AN7U8uuJ30="
-
 script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker build -t node:$NODE_VERSION --build-arg NODE_IMAGE="node:${NODE_VERSION}" .
